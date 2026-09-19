@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aeroclub San Juan | Centro de Aviación Civil San Juan</title>
+  <meta name="description" content="Centro de Aviación Civil San Juan (CACSJ). Cursos de piloto privado, comercial, planeador, paracaidismo y aeromodelismo. Vuela con nosotros.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="#inicio" class="navbar__brand">
+        <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="navbar__logo">
+        <span class="navbar__title">Aeroclub<br><small>San Juan</small></span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__menu" id="navMenu">
+        <ul class="navbar__links">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#cursos" class="nav-link">Cursos</a></li>
+          <li><a href="#flota" class="nav-link">Flota</a></li>
+          <li><a href="#eventos" class="nav-link">Eventos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="btn btn--small btn--outline navbar__cta">Iniciá tu curso</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="inicio" class="hero">
+      <div class="hero__bg" style="background-image: url('images/hangar-sunset.jpeg');"></div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Centro de Aviación Civil San Juan · Fundado 1948</p>
+        <h1 class="hero__title">Vuela con nosotros</h1>
+        <p class="hero__subtitle">Formamos pilotos privados, comerciales, planeadores, paracaidistas y aeromodelistas en el corazón de Cuyo. Tu vocación por volar empieza acá.</p>
+        <div class="hero__actions">
+          <a href="#cursos" class="btn btn--primary">Iniciá tu curso</a>
+          <a href="#flota" class="btn btn--ghost">Conocé nuestra flota</a>
+        </div>
+      </div>
+      <a href="#cursos" class="hero__scroll" aria-label="Ir a la sección de cursos">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== CURSOS ===== -->
+    <section id="cursos" class="section cursos">
+      <div class="container">
+        <p class="section__eyebrow">Formación aeronáutica</p>
+        <h2 class="section__title">Nuestros Cursos</h2>
+        <p class="section__lead">Programas de instrucción dictados por profesionales habilitados por ANAC, con aeronaves propias y más de siete décadas de trayectoria.</p>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card__icon">✈️</div>
+            <h3 class="card__title">Piloto Privado</h3>
+            <p class="card__text">Tu primer paso en la aviación. Aprendé a volar aviones monomotores y obtené tu licencia de Piloto Privado de Avión (PPA).</p>
+            <ul class="card__list">
+              <li>Instrucción teórica y práctica</li>
+              <li>Instructores certificados ANAC</li>
+              <li>Flota propia de entrenamiento</li>
+            </ul>
+            <a href="#contacto" class="card__link">Quiero informarme →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🛫</div>
+            <h3 class="card__title">Piloto Comercial y Habilitaciones</h3>
+            <p class="card__text">Profesionalizá tu vuelo. Sumá horas, habilitaciones de instrumentos, multimotor y avanzá hacia una carrera comercial.</p>
+            <ul class="card__list">
+              <li>Habilitación de vuelo por instrumentos</li>
+              <li>Habilitación multimotor</li>
+              <li>Preparación para exámenes ANAC</li>
+            </ul>
+            <a href="#contacto" class="card__link">Quiero informarme →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🪂</div>
+            <h3 class="card__title">Piloto de Planeador</h3>
+            <p class="card__text">Volá en silencio aprovechando las corrientes térmicas de la Precordillera. Una disciplina única y desafiante.</p>
+            <ul class="card__list">
+              <li>Vuelo a vela sin motor</li>
+              <li>Aprovechamiento de térmicas cuyanas</li>
+              <li>Instrucción progresiva en doble comando</li>
+            </ul>
+            <a href="#contacto" class="card__link">Quiero informarme →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🪂</div>
+            <h3 class="card__title">Paracaidismo</h3>
+            <p class="card__text">Viví la adrenalina del salto libre. Formación progresiva desde tu primer salto hasta la licencia de paracaidista deportivo.</p>
+            <ul class="card__list">
+              <li>Saltos tándem de iniciación</li>
+              <li>Curso de apertura automática</li>
+              <li>Equipamiento homologado</li>
+            </ul>
+            <a href="#contacto" class="card__link">Quiero informarme →</a>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🛩️</div>
+            <h3 class="card__title">Aeromodelismo</h3>
+            <p class="card__text">Diseñá, construí y pilotá modelos a escala. Ideal para introducirse al mundo aeronáutico desde chicos o grandes.</p>
+            <ul class="card__list">
+              <li>Construcción de modelos</li>
+              <li>Pilotaje a control remoto</li>
+              <li>Actividades para toda la familia</li>
+            </ul>
+            <a href="#contacto" class="card__link">Quiero informarme →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FLOTA ===== -->
+    <section id="flota" class="section flota">
+      <div class="container">
+        <p class="section__eyebrow section__eyebrow--light">Nuestros equipos</p>
+        <h2 class="section__title section__title--light">Flota de Aeronaves y Equipos</h2>
+        <p class="section__lead section__lead--light">Contamos con una flota propia de aviones de instrucción, hangares equipados y todo el material necesario para tu formación.</p>
+
+        <div class="gallery">
+          <figure class="gallery__item gallery__item--wide">
+            <img src="images/aviones.jpeg" alt="Aviones de instrucción del Aeroclub San Juan en la plataforma" loading="lazy">
+            <figcaption>
+              <h3>Flota de instrucción</h3>
+              <p>Monomotores listos para prácticas y vuelos de instrucción diaria.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="images/hangar-sunset.jpeg" alt="Hangar del Centro de Aviación Civil San Juan" loading="lazy">
+            <figcaption>
+              <h3>Hangar principal</h3>
+              <p>Resguardo y mantenimiento de nuestras aeronaves.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="images/cacsj.jpeg" alt="Insignia del Centro de Aviación Civil San Juan" loading="lazy">
+            <figcaption>
+              <h3>Nuestra identidad</h3>
+              <p>Más de 75 años de historia aeronáutica sanjuanina.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item gallery__item--wide">
+            <img src="images/people.jpeg" alt="Equipo y socios del Aeroclub San Juan" loading="lazy">
+            <figcaption>
+              <h3>Nuestra gente</h3>
+              <p>Instructores, pilotos y paracaidistas que forman la familia del club.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVENTOS ===== -->
+    <section id="eventos" class="section eventos">
+      <div class="container">
+        <p class="section__eyebrow">Agenda</p>
+        <h2 class="section__title">Próximos Eventos</h2>
+        <p class="section__lead">Sumate a nuestras actividades abiertas a socios, alumnos y a toda la comunidad.</p>
+
+        <div class="events-grid">
+          <article class="event-card">
+            <div class="event-card__date">
+              <span class="event-card__day">04</span>
+              <span class="event-card__month">Oct</span>
+            </div>
+            <div class="event-card__body">
+              <h3>Jornada de vuelos de bautismo</h3>
+              <p>Viví tu primer vuelo en avión acompañado por un instructor certificado. Inscripción previa requerida.</p>
+              <span class="event-card__tag">Abierto a la comunidad</span>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__date">
+              <span class="event-card__day">18</span>
+              <span class="event-card__month">Oct</span>
+            </div>
+            <div class="event-card__body">
+              <h3>Encuentro de aeromodelismo</h3>
+              <p>Exhibición y vuelo libre de modelos a escala construidos por socios del club.</p>
+              <span class="event-card__tag">Familiar</span>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__date">
+              <span class="event-card__day">08</span>
+              <span class="event-card__month">Nov</span>
+            </div>
+            <div class="event-card__body">
+              <h3>Jornada de saltos en tándem</h3>
+              <p>Actividad de paracaidismo para principiantes con instructores habilitados.</p>
+              <span class="event-card__tag">Cupos limitados</span>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <div class="event-card__date">
+              <span class="event-card__day">22</span>
+              <span class="event-card__month">Nov</span>
+            </div>
+            <div class="event-card__body">
+              <h3>Charla informativa: Piloto Comercial</h3>
+              <p>Conocé el plan de estudios, requisitos y salidas laborales de la carrera comercial.</p>
+              <span class="event-card__tag">Ingreso libre</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="section contacto">
+      <div class="container contacto__grid">
+        <div class="contacto__info">
+          <p class="section__eyebrow">Hablemos</p>
+          <h2 class="section__title">Contacto y Ubicación</h2>
+          <p class="section__lead">Acercate al Aeroclub San Juan, escribinos o dejanos tu consulta y te contactamos a la brevedad.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-list__icon">📍</span>
+              <div>
+                <strong>Dirección</strong>
+                <p>Aeródromo Las Chacritas, Ruta Prov. 20, Km 12, San Juan, Argentina</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-list__icon">📞</span>
+              <div>
+                <strong>Teléfono</strong>
+                <p>+54 264 000-0000</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-list__icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>info@aeroclubsanjuan.com.ar</p>
+              </div>
+            </li>
+            <li>
+              <span class="contact-list__icon">🕓</span>
+              <div>
+                <strong>Horario</strong>
+                <p>Martes a domingo, 9:00 a 18:00 hs</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="map-embed">
+            <iframe
+              title="Ubicación Aeroclub San Juan"
+              src="https://maps.google.com/maps?q=Aerodromo%20Las%20Chacritas%20San%20Juan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="contacto__form-wrap">
+          <form id="contactForm" class="contact-form" novalidate>
+            <h3>Envianos tu consulta</h3>
+
+            <div class="form-group">
+              <label for="name">Nombre y apellido</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+              <span class="form-error" data-error-for="name"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+              <span class="form-error" data-error-for="email"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone" placeholder="Ej: 264 000-0000">
+            </div>
+
+            <div class="form-group">
+              <label for="interest">Me interesa</label>
+              <select id="interest" name="interest">
+                <option value="">Seleccioná una opción</option>
+                <option value="privado">Curso de Piloto Privado</option>
+                <option value="comercial">Curso de Piloto Comercial y Habilitaciones</option>
+                <option value="planeador">Curso de Piloto de Planeador</option>
+                <option value="paracaidismo">Curso de Paracaidista</option>
+                <option value="aeromodelismo">Curso de Aeromodelista</option>
+                <option value="otro">Otra consulta</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="4" placeholder="Contanos en qué podemos ayudarte" required></textarea>
+              <span class="form-error" data-error-for="message"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="footer__logo">
+        <p>Centro de Aviación Civil San Juan — Formando pilotos y pasión por volar desde 1948.</p>
+      </div>
+
+      <nav class="footer__links">
+        <a href="#inicio">Inicio</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#flota">Flota</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Aeroclub San Juan (CACSJ). Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
