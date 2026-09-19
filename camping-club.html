@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camping y Club | Aeroclub San Juan</title>
+  <meta name="description" content="Camping y Club del Aeroclub San Juan: hacerse socio, pileta, canchas, cantina y actividades recreativas para toda la familia.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="index.html#inicio" class="navbar__brand">
+        <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="navbar__logo">
+        <span class="navbar__title">Aeroclub<br><small>San Juan</small></span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__menu" id="navMenu">
+        <ul class="navbar__links">
+          <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+          <li class="navbar__dropdown" id="barracasDropdown">
+            <button type="button" class="nav-link nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
+              Barracas <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="barraca-motor.html" class="dropdown-link"><span aria-hidden="true">✈️</span> Barraca de Motor</a></li>
+              <li><a href="barraca-planeador.html" class="dropdown-link"><span aria-hidden="true">🛩️</span> Barraca de Planeador</a></li>
+              <li><a href="barraca-paracaidismo.html" class="dropdown-link"><span aria-hidden="true">🪂</span> Barraca de Paracaidismo</a></li>
+              <li><a href="barraca-aeromodelismo.html" class="dropdown-link"><span aria-hidden="true">🎮</span> Barraca de Aeromodelismo</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#flota" class="nav-link">Flota</a></li>
+          <li><a href="index.html#eventos" class="nav-link">Eventos</a></li>
+          <li><a href="camping-club.html" class="nav-link">Camping y Club</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn btn--small btn--outline navbar__cta">Iniciá tu curso</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image: url('images/people.jpeg');"></div>
+      <div class="page-hero__overlay"></div>
+      <div class="container page-hero__content">
+        <p class="breadcrumb"><a href="index.html#inicio">Inicio</a> · Camping y Club</p>
+        <p class="page-hero__eyebrow">Más que aviación</p>
+        <h1 class="page-hero__title">Camping y Club</h1>
+        <p class="page-hero__subtitle">El Aeroclub San Juan también es un espacio social y recreativo para socios, familias y amigos.</p>
+      </div>
+    </section>
+
+    <!-- ===== HACERSE SOCIO ===== -->
+    <section class="detail-section">
+      <div class="container">
+        <p class="section__eyebrow">Socios</p>
+        <h2 class="section__title">Hacerte socio del club</h2>
+        <p class="section__lead">Ser socio del Aeroclub San Juan te da acceso a nuestras instalaciones recreativas, descuentos en cursos de vuelo y participación en la vida institucional del club.</p>
+
+        <div class="steps-list">
+          <div class="step-card">
+            <span class="step-card__num">1</span>
+            <h3>Consultá la cuota social</h3>
+            <p>Escribinos por WhatsApp, email o acercate a la sede para conocer las categorías de socio vigentes.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__num">2</span>
+            <h3>Completá la solicitud</h3>
+            <p>Presentá tus datos y documentación en secretaría para iniciar el trámite de asociación.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__num">3</span>
+            <h3>Aprobación en comisión</h3>
+            <p>Tu solicitud es evaluada por la Comisión Directiva en la reunión mensual del club.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__num">4</span>
+            <h3>¡Ya sos socio!</h3>
+            <p>Accedé a pileta, canchas, cantina, actividades recreativas y beneficios en cursos de vuelo.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:36px;">
+          <a href="index.html#contacto" class="btn btn--primary">Quiero ser socio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INSTALACIONES ===== -->
+    <section class="detail-section detail-section--alt">
+      <div class="container">
+        <p class="section__eyebrow">Instalaciones</p>
+        <h2 class="section__title">Un club para toda la familia</h2>
+        <p class="section__lead">Además de la actividad aeronáutica, el predio cuenta con espacios recreativos y sociales para disfrutar en familia o con amigos.</p>
+
+        <div class="amenity-grid">
+          <article class="amenity-card">
+            <div class="amenity-card__icon">🏊</div>
+            <h3 class="amenity-card__title">Pileta</h3>
+            <p class="amenity-card__text">Pileta social para socios y sus familias, disponible en temporada de verano.</p>
+          </article>
+
+          <article class="amenity-card">
+            <div class="amenity-card__icon">🏐</div>
+            <h3 class="amenity-card__title">Canchas</h3>
+            <p class="amenity-card__text">Canchas deportivas para el uso recreativo de los socios durante todo el año.</p>
+          </article>
+
+          <article class="amenity-card">
+            <div class="amenity-card__icon">🍽️</div>
+            <h3 class="amenity-card__title">Cantina</h3>
+            <p class="amenity-card__text">Cantina del club, punto de encuentro de socios, alumnos y visitantes después de volar.</p>
+          </article>
+
+          <article class="amenity-card">
+            <div class="amenity-card__icon">🎉</div>
+            <h3 class="amenity-card__title">Actividades recreativas</h3>
+            <p class="amenity-card__text">Jornadas abiertas, encuentros familiares y eventos sociales organizados durante el año.</p>
+          </article>
+
+          <article class="amenity-card">
+            <div class="amenity-card__icon">⛺</div>
+            <h3 class="amenity-card__title">Camping</h3>
+            <p class="amenity-card__text">Espacio de camping dentro del predio, ideal para pasar el día o pernoctar junto al aeródromo.</p>
+          </article>
+
+          <article class="amenity-card">
+            <div class="amenity-card__icon">👨‍👩‍👧‍👦</div>
+            <h3 class="amenity-card__title">Vida institucional</h3>
+            <p class="amenity-card__text">Participación en asambleas, comisiones y la vida institucional de más de 75 años del club.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Sumate al Aeroclub San Juan</h2>
+          <p>Contactanos para conocer la cuota social vigente y todos los beneficios de ser socio.</p>
+          <a href="index.html#contacto" class="btn btn--primary">Contactanos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="footer__logo">
+        <p>Centro de Aviación Civil San Juan — Formando pilotos y pasión por volar desde 1948.</p>
+      </div>
+
+      <nav class="footer__links">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#cursos">Cursos</a>
+        <a href="index.html#flota">Flota</a>
+        <a href="index.html#eventos">Eventos</a>
+        <a href="camping-club.html">Camping y Club</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <nav class="footer__links">
+        <a href="barraca-motor.html">Barraca de Motor</a>
+        <a href="barraca-planeador.html">Barraca de Planeador</a>
+        <a href="barraca-paracaidismo.html">Barraca de Paracaidismo</a>
+        <a href="barraca-aeromodelismo.html">Barraca de Aeromodelismo</a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Aeroclub San Juan (CACSJ). Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

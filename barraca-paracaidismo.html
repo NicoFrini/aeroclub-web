@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barraca de Paracaidismo | Aeroclub San Juan</title>
+  <meta name="description" content="Barraca de Paracaidismo del Aeroclub San Juan: equipos, zona de salto, escuela de paracaidismo e instructores.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="index.html#inicio" class="navbar__brand">
+        <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="navbar__logo">
+        <span class="navbar__title">Aeroclub<br><small>San Juan</small></span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__menu" id="navMenu">
+        <ul class="navbar__links">
+          <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+          <li class="navbar__dropdown" id="barracasDropdown">
+            <button type="button" class="nav-link nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
+              Barracas <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="barraca-motor.html" class="dropdown-link"><span aria-hidden="true">✈️</span> Barraca de Motor</a></li>
+              <li><a href="barraca-planeador.html" class="dropdown-link"><span aria-hidden="true">🛩️</span> Barraca de Planeador</a></li>
+              <li><a href="barraca-paracaidismo.html" class="dropdown-link"><span aria-hidden="true">🪂</span> Barraca de Paracaidismo</a></li>
+              <li><a href="barraca-aeromodelismo.html" class="dropdown-link"><span aria-hidden="true">🎮</span> Barraca de Aeromodelismo</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#flota" class="nav-link">Flota</a></li>
+          <li><a href="index.html#eventos" class="nav-link">Eventos</a></li>
+          <li><a href="camping-club.html" class="nav-link">Camping y Club</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn btn--small btn--outline navbar__cta">Iniciá tu curso</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image: url('images/paracaidas.jpeg');"></div>
+      <div class="page-hero__overlay"></div>
+      <div class="container page-hero__content">
+        <p class="breadcrumb"><a href="index.html#inicio">Inicio</a> · <a href="index.html#flota">Flota</a> · Barraca de Paracaidismo</p>
+        <p class="page-hero__eyebrow">Barracas del Aeroclub San Juan</p>
+        <h1 class="page-hero__title">Barraca de Paracaidismo</h1>
+        <p class="page-hero__subtitle">La adrenalina del salto libre, con equipos homologados y saltadores experimentados.</p>
+      </div>
+    </section>
+
+    <!-- ===== EQUIPOS ===== -->
+    <section class="detail-section">
+      <div class="container">
+        <p class="section__eyebrow">Equipos</p>
+        <h2 class="section__title">Nuestros equipos de paracaídas</h2>
+        <p class="section__lead">Utilizamos equipos homologados, con paracaídas principal y de reserva, revisados periódicamente por personal habilitado.</p>
+
+        <div class="fleet-grid">
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/paracaidas.jpeg" alt="Paracaidista descendiendo con canopy multicolor" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">Equipo</span>
+              <h3 class="fleet-card__title">Canopy de iniciación</h3>
+              <p class="fleet-card__text">Perfil estable, pensado para saltos tándem y primeros saltos de apertura automática.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/paracaidas2.jpeg" alt="Paracaidista descendiendo con canopy deportivo" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">Equipo</span>
+              <h3 class="fleet-card__title">Canopy deportivo</h3>
+              <p class="fleet-card__text">Utilizado por saltadores con experiencia en la disciplina de precisión y vuelo relativo.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/c182.jpeg" alt="Cessna 182 LV-JCR, avión de salto" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-JCR</span>
+              <h3 class="fleet-card__title">Cessna 182 (avión de salto)</h3>
+              <p class="fleet-card__text">Aeronave de la Barraca de Motor utilizada para elevar a los saltadores hasta la altura de largada.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ZONA DE SALTO ===== -->
+    <section class="detail-section detail-section--alt">
+      <div class="container">
+        <div class="detail-grid">
+          <div class="detail-grid__img">
+            <img src="images/pista.jpeg" alt="Pista y zona de aterrizaje del Aeroclub San Juan" loading="lazy">
+          </div>
+          <div>
+            <p class="section__eyebrow">Zona de salto</p>
+            <h2 class="section__title">Nuestra zona de largada y aterrizaje</h2>
+            <p class="section__lead" style="margin-bottom:0;">Los saltos se realizan sobre el predio del Aeroclub, con una amplia zona de aterrizaje junto a la pista principal y personal en tierra durante toda la operación.</p>
+            <ul class="detail-list">
+              <li>Zona de aterrizaje despejada junto a pista</li>
+              <li>Sala de empaquetado y revisión de equipos</li>
+              <li>Coordinación en tierra durante cada jornada de salto</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ESCUELA DE PARACAIDISMO ===== -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-grid detail-grid--reverse">
+          <div class="detail-grid__img">
+            <img src="images/paracaidas2.jpeg" alt="Paracaidista en descenso" loading="lazy">
+          </div>
+          <div>
+            <p class="section__eyebrow">Escuela de paracaidismo</p>
+            <h2 class="section__title">Formate como paracaidista</h2>
+            <p class="section__lead" style="margin-bottom:0;">El Curso de Paracaidista arranca con saltos tándem de iniciación y avanza hacia el curso de apertura automática (PAC), rumbo a la licencia de paracaidista deportivo.</p>
+            <ul class="detail-list">
+              <li>Saltos tándem de iniciación</li>
+              <li>Curso de apertura automática (PAC)</li>
+              <li>Progresión hacia la licencia deportiva</li>
+            </ul>
+            <div style="margin-top:24px;">
+              <a href="index.html#cursos" class="btn btn--primary">Ver cursos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INSTRUCTORES ===== -->
+    <section class="detail-section detail-section--alt">
+      <div class="container">
+        <p class="section__eyebrow">Instructores</p>
+        <h2 class="section__title">Nuestro equipo de instructores</h2>
+        <div class="instructor-note">
+          <div class="instructor-note__icon">🎓</div>
+          <div>
+            <h3>Instructores y jefes de zona de salto habilitados</h3>
+            <p>La Barraca de Paracaidismo cuenta con instructores de salto habilitados y un jefe de zona de salto a cargo de cada jornada, garantizando el cumplimiento de los protocolos de seguridad. Contactanos para conocer la disponibilidad y coordinar tu primer salto.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Viví la adrenalina del salto libre</h2>
+          <p>Escribinos y te contamos todo sobre la Barraca de Paracaidismo y nuestros cursos.</p>
+          <a href="index.html#contacto" class="btn btn--primary">Contactanos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="footer__logo">
+        <p>Centro de Aviación Civil San Juan — Formando pilotos y pasión por volar desde 1948.</p>
+      </div>
+
+      <nav class="footer__links">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#cursos">Cursos</a>
+        <a href="index.html#flota">Flota</a>
+        <a href="index.html#eventos">Eventos</a>
+        <a href="camping-club.html">Camping y Club</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <nav class="footer__links">
+        <a href="barraca-motor.html">Barraca de Motor</a>
+        <a href="barraca-planeador.html">Barraca de Planeador</a>
+        <a href="barraca-paracaidismo.html">Barraca de Paracaidismo</a>
+        <a href="barraca-aeromodelismo.html">Barraca de Aeromodelismo</a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Aeroclub San Juan (CACSJ). Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -233,6 +233,67 @@ h1, h2, h3, h4 {
   color: var(--color-navy);
 }
 
+.navbar__dropdown {
+  position: relative;
+}
+
+.nav-link--dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.nav-link--dropdown .caret {
+  font-size: 0.7rem;
+  transition: transform var(--transition);
+}
+
+.navbar__dropdown.is-open .nav-link--dropdown .caret {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  min-width: 250px;
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-strong);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+}
+
+.navbar__dropdown.is-open .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--color-navy);
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: background var(--transition), color var(--transition);
+}
+
+.dropdown-link:hover {
+  background: var(--color-offwhite);
+  color: var(--color-sky);
+}
+
 .navbar__toggle {
   display: none;
   flex-direction: column;
@@ -344,6 +405,390 @@ h1, h2, h3, h4 {
   100% { opacity: 0; top: 8px; }
 }
 
+/* ===== Page hero (sub-páginas) ===== */
+.page-hero {
+  position: relative;
+  min-height: 46vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: var(--color-white);
+  padding-top: 78px;
+}
+
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 21, 48, 0.75) 0%, rgba(6, 21, 48, 0.55) 40%, rgba(6, 21, 48, 0.96) 100%);
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 48px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--color-sky-light);
+  margin-bottom: 14px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color var(--transition);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-white);
+}
+
+.page-hero__eyebrow {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.8rem;
+  color: var(--color-sky-light);
+  margin-bottom: 12px;
+}
+
+.page-hero__title {
+  font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.page-hero__subtitle {
+  max-width: 640px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+}
+
+/* ===== Runway banner ===== */
+.runway-banner {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 56px;
+}
+
+.runway-banner__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.runway-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6, 21, 48, 0.92) 0%, rgba(6, 21, 48, 0.65) 55%, rgba(6, 21, 48, 0.3) 100%);
+}
+
+.runway-banner__content {
+  position: relative;
+  z-index: 2;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+}
+
+.runway-banner__title {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  max-width: 220px;
+}
+
+.runway-banner__stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.runway-stat {
+  color: var(--color-white);
+}
+
+.runway-stat__value {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--color-sky-light);
+}
+
+.runway-stat__label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===== Fleet cards (aeronaves específicas) ===== */
+.fleet-heading {
+  color: var(--color-white);
+  font-size: 1.3rem;
+  margin: 8px 0 24px;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-bottom: 20px;
+}
+
+.fleet-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.fleet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+.fleet-card__img-wrap {
+  height: 200px;
+  overflow: hidden;
+}
+
+.fleet-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fleet-card:hover .fleet-card__img-wrap img {
+  transform: scale(1.08);
+}
+
+.fleet-card__body {
+  padding: 22px 24px 26px;
+}
+
+.fleet-card__tag {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--color-sky-light);
+  color: var(--color-navy-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.fleet-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.fleet-card__text {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+}
+
+/* ===== Detail sections (barracas) ===== */
+.detail-section {
+  padding: 80px 0;
+}
+
+.detail-section--alt {
+  background: var(--color-offwhite);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.detail-grid__img {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.detail-grid__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-grid--reverse .detail-grid__img {
+  order: 2;
+}
+
+.detail-list {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-list li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.detail-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-sky);
+  font-weight: 700;
+}
+
+/* ===== Instructor note ===== */
+.instructor-note {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  box-shadow: var(--shadow-soft);
+}
+
+.instructor-note__icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.instructor-note h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.instructor-note p {
+  color: var(--color-gray);
+  font-size: 0.95rem;
+}
+
+/* ===== Amenity cards (Camping y Club) ===== */
+.amenity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+}
+
+.amenity-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.amenity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+.amenity-card__icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.amenity-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.amenity-card__text {
+  color: var(--color-gray);
+  font-size: 0.92rem;
+}
+
+/* ===== Steps list (Hacerse socio) ===== */
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.step-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 26px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.step-card__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.step-card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+}
+
+/* ===== CTA band ===== */
+.cta-band {
+  background: linear-gradient(135deg, var(--color-navy), var(--color-navy-light));
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.cta-band h2 {
+  color: var(--color-white);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 14px;
+}
+
+.cta-band p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 520px;
+  margin: 0 auto 28px;
+}
+
 /* ===== Section shared ===== */
 .section {
   padding: 100px 0;
@@ -412,6 +857,12 @@ h1, h2, h3, h4 {
 
 .card__icon {
   font-size: 2.4rem;
+  margin-bottom: 18px;
+}
+
+.card__icon-img {
+  height: 44px;
+  width: auto;
   margin-bottom: 18px;
 }
 
@@ -845,6 +1296,14 @@ h1, h2, h3, h4 {
   .contacto__grid {
     grid-template-columns: 1fr;
   }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-grid--reverse .detail-grid__img {
+    order: 0;
+  }
 }
 
 @media (max-width: 860px) {
@@ -893,6 +1352,39 @@ h1, h2, h3, h4 {
     align-self: flex-start;
   }
 
+  .nav-link--dropdown {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0;
+    margin: 0 0 8px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: max-height var(--transition);
+  }
+
+  .navbar__dropdown.is-open .dropdown-menu {
+    max-height: 320px;
+  }
+
+  .dropdown-link {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 12px 4px 12px 16px;
+  }
+
+  .dropdown-link:hover {
+    background: transparent;
+    color: var(--color-sky-light);
+  }
+
   .navbar__toggle.is-active span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
@@ -930,6 +1422,22 @@ h1, h2, h3, h4 {
   }
 
   .footer__inner {
+    flex-direction: column;
+  }
+
+  .page-hero {
+    min-height: 38vh;
+  }
+
+  .runway-banner__content {
+    padding: 26px 22px;
+  }
+
+  .detail-section {
+    padding: 56px 0;
+  }
+
+  .instructor-note {
     flex-direction: column;
   }
 }

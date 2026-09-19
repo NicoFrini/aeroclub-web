@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barraca de Motor | Aeroclub San Juan</title>
+  <meta name="description" content="Barraca de Motor del Aeroclub San Juan: flota de aviones a motor, hangar, escuela de vuelo e instructores.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="index.html#inicio" class="navbar__brand">
+        <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="navbar__logo">
+        <span class="navbar__title">Aeroclub<br><small>San Juan</small></span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar__menu" id="navMenu">
+        <ul class="navbar__links">
+          <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+          <li class="navbar__dropdown" id="barracasDropdown">
+            <button type="button" class="nav-link nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
+              Barracas <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="barraca-motor.html" class="dropdown-link"><span aria-hidden="true">✈️</span> Barraca de Motor</a></li>
+              <li><a href="barraca-planeador.html" class="dropdown-link"><span aria-hidden="true">🛩️</span> Barraca de Planeador</a></li>
+              <li><a href="barraca-paracaidismo.html" class="dropdown-link"><span aria-hidden="true">🪂</span> Barraca de Paracaidismo</a></li>
+              <li><a href="barraca-aeromodelismo.html" class="dropdown-link"><span aria-hidden="true">🎮</span> Barraca de Aeromodelismo</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#flota" class="nav-link">Flota</a></li>
+          <li><a href="index.html#eventos" class="nav-link">Eventos</a></li>
+          <li><a href="camping-club.html" class="nav-link">Camping y Club</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn btn--small btn--outline navbar__cta">Iniciá tu curso</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="page-hero__bg" style="background-image: url('images/hangar-sunset.jpeg');"></div>
+      <div class="page-hero__overlay"></div>
+      <div class="container page-hero__content">
+        <p class="breadcrumb"><a href="index.html#inicio">Inicio</a> · <a href="index.html#flota">Flota</a> · Barraca de Motor</p>
+        <p class="page-hero__eyebrow">Barracas del Aeroclub San Juan</p>
+        <h1 class="page-hero__title">Barraca de Motor</h1>
+        <p class="page-hero__subtitle">Nuestra flota de monomotores y bimotores para instrucción, travesía y remolque de planeadores.</p>
+      </div>
+    </section>
+
+    <!-- ===== FLOTA ===== -->
+    <section class="detail-section">
+      <div class="container">
+        <p class="section__eyebrow">Flota</p>
+        <h2 class="section__title">Aeronaves de la Barraca de Motor</h2>
+        <p class="section__lead">Cinco aeronaves a motor operativas, mantenidas por nuestro personal técnico habilitado y disponibles para instrucción diaria.</p>
+
+        <div class="fleet-grid">
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/archer.jpeg" alt="Piper Archer II LV-MJE en vuelo" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-MJE</span>
+              <h3 class="fleet-card__title">Piper Archer II</h3>
+              <p class="fleet-card__text">Monomotor de 4 plazas, usado en instrucción avanzada de Piloto Privado y vuelos de travesía.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/c182.jpeg" alt="Cessna 182 LV-JCR en plataforma" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-JCR</span>
+              <h3 class="fleet-card__title">Cessna 182 Skylane</h3>
+              <p class="fleet-card__text">Monomotor de uso restringido del Aeroclub San Juan, también empleado como avión de salto para paracaidismo.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/pa38-tomahawk.jpeg" alt="Piper Tomahawk PA-38 LV-OFJ frente al hangar" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-OFJ</span>
+              <h3 class="fleet-card__title">Piper Tomahawk PA-38</h3>
+              <p class="fleet-card__text">Biplaza de entrenamiento básico, la aeronave de tus primeras horas de vuelo.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/seneca.jpeg" alt="Piper Seneca bimotor frente al hangar" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">Bimotor</span>
+              <h3 class="fleet-card__title">Piper Seneca</h3>
+              <p class="fleet-card__text">Bimotor utilizado en la habilitación multimotor del curso de Piloto Comercial.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/ranquel.jpeg" alt="Piper PA-18 Ranquel LV-IJJ, avión remolcador" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-IJJ</span>
+              <h3 class="fleet-card__title">Piper PA-18 "Ranquel"</h3>
+              <p class="fleet-card__text">Avión remolcador de planeadores, compartido con la Barraca de Planeador.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="runway-banner" style="margin-top:48px;">
+          <div class="runway-banner__bg" style="background-image: url('images/pista.jpeg');"></div>
+          <div class="runway-banner__overlay"></div>
+          <div class="runway-banner__content">
+            <p class="runway-banner__title">Nuestra pista</p>
+            <div class="runway-banner__stats">
+              <div class="runway-stat">
+                <span class="runway-stat__value">18 / 36</span>
+                <span class="runway-stat__label">Cabeceras</span>
+              </div>
+              <div class="runway-stat">
+                <span class="runway-stat__value">1515 m</span>
+                <span class="runway-stat__label">Extensión</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HANGAR ===== -->
+    <section class="detail-section detail-section--alt">
+      <div class="container">
+        <div class="detail-grid">
+          <div class="detail-grid__img">
+            <img src="images/hangar-sunset.jpeg" alt="Hangar del Centro de Aviación Civil San Juan" loading="lazy">
+          </div>
+          <div>
+            <p class="section__eyebrow">Hangar</p>
+            <h2 class="section__title">Nuestro hangar</h2>
+            <p class="section__lead" style="margin-bottom:0;">El hangar del Aeroclub San Juan resguarda y da mantenimiento a toda la flota a motor, con acceso directo a la pista.</p>
+            <ul class="detail-list">
+              <li>Resguardo cubierto para la flota a motor</li>
+              <li>Taller de mantenimiento aeronáutico</li>
+              <li>Zona de despacho y planificación de vuelo</li>
+              <li>Acceso directo a plataforma y pista</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ESCUELA DE VUELO ===== -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-grid detail-grid--reverse">
+          <div class="detail-grid__img">
+            <img src="images/aviones.jpeg" alt="Aviones de instrucción en la plataforma" loading="lazy">
+          </div>
+          <div>
+            <p class="section__eyebrow">Escuela de vuelo</p>
+            <h2 class="section__title">Formate como piloto a motor</h2>
+            <p class="section__lead" style="margin-bottom:0;">Desde el Curso de Piloto Privado hasta el Piloto Comercial y sus habilitaciones (instrumentos, multimotor), toda la instrucción a motor del club se dicta con esta flota.</p>
+            <ul class="detail-list">
+              <li>Curso de Piloto Privado (PPA)</li>
+              <li>Curso de Piloto Comercial y Habilitaciones</li>
+              <li>Habilitación de instrumentos y multimotor</li>
+            </ul>
+            <div style="margin-top:24px;">
+              <a href="index.html#cursos" class="btn btn--primary">Ver cursos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INSTRUCTORES ===== -->
+    <section class="detail-section detail-section--alt">
+      <div class="container">
+        <p class="section__eyebrow">Instructores</p>
+        <h2 class="section__title">Nuestro cuerpo de instructores</h2>
+        <div class="instructor-note">
+          <div class="instructor-note__icon">🎓</div>
+          <div>
+            <h3>Pilotos instructores habilitados por ANAC</h3>
+            <p>La instrucción a motor está a cargo de instructores de vuelo (FI) con habilitación vigente otorgada por la Administración Nacional de Aviación Civil (ANAC), con experiencia en formación de pilotos privados y comerciales. Contactanos para conocer la disponibilidad y coordinar tu primera clase.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>¿Querés volar con nosotros?</h2>
+          <p>Escribinos y te contamos todo sobre la Barraca de Motor y nuestros cursos.</p>
+          <a href="index.html#contacto" class="btn btn--primary">Contactanos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="footer__logo">
+        <p>Centro de Aviación Civil San Juan — Formando pilotos y pasión por volar desde 1948.</p>
+      </div>
+
+      <nav class="footer__links">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#cursos">Cursos</a>
+        <a href="index.html#flota">Flota</a>
+        <a href="index.html#eventos">Eventos</a>
+        <a href="camping-club.html">Camping y Club</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <nav class="footer__links">
+        <a href="barraca-motor.html">Barraca de Motor</a>
+        <a href="barraca-planeador.html">Barraca de Planeador</a>
+        <a href="barraca-paracaidismo.html">Barraca de Paracaidismo</a>
+        <a href="barraca-aeromodelismo.html">Barraca de Aeromodelismo</a>
+      </nav>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year"></span> Aeroclub San Juan (CACSJ). Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

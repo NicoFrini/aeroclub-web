@@ -16,7 +16,7 @@
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="navbar__inner container">
-      <a href="#inicio" class="navbar__brand">
+      <a href="index.html#inicio" class="navbar__brand">
         <img src="images/logo.png" alt="Centro de Aviación Civil San Juan" class="navbar__logo">
         <span class="navbar__title">Aeroclub<br><small>San Juan</small></span>
       </a>
@@ -27,13 +27,25 @@
 
       <nav class="navbar__menu" id="navMenu">
         <ul class="navbar__links">
-          <li><a href="#inicio" class="nav-link">Inicio</a></li>
-          <li><a href="#cursos" class="nav-link">Cursos</a></li>
-          <li><a href="#flota" class="nav-link">Flota</a></li>
-          <li><a href="#eventos" class="nav-link">Eventos</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+          <li class="navbar__dropdown" id="barracasDropdown">
+            <button type="button" class="nav-link nav-link--dropdown" aria-haspopup="true" aria-expanded="false">
+              Barracas <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="barraca-motor.html" class="dropdown-link"><span aria-hidden="true">✈️</span> Barraca de Motor</a></li>
+              <li><a href="barraca-planeador.html" class="dropdown-link"><span aria-hidden="true">🛩️</span> Barraca de Planeador</a></li>
+              <li><a href="barraca-paracaidismo.html" class="dropdown-link"><span aria-hidden="true">🪂</span> Barraca de Paracaidismo</a></li>
+              <li><a href="barraca-aeromodelismo.html" class="dropdown-link"><span aria-hidden="true">🎮</span> Barraca de Aeromodelismo</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#flota" class="nav-link">Flota</a></li>
+          <li><a href="index.html#eventos" class="nav-link">Eventos</a></li>
+          <li><a href="camping-club.html" class="nav-link">Camping y Club</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
         </ul>
-        <a href="#contacto" class="btn btn--small btn--outline navbar__cta">Iniciá tu curso</a>
+        <a href="index.html#contacto" class="btn btn--small btn--outline navbar__cta">Iniciá tu curso</a>
       </nav>
     </div>
   </header>
@@ -48,11 +60,11 @@
         <h1 class="hero__title">Vuela con nosotros</h1>
         <p class="hero__subtitle">Formamos pilotos privados, comerciales, planeadores, paracaidistas y aeromodelistas en el corazón de Cuyo. Tu vocación por volar empieza acá.</p>
         <div class="hero__actions">
-          <a href="#cursos" class="btn btn--primary">Iniciá tu curso</a>
-          <a href="#flota" class="btn btn--ghost">Conocé nuestra flota</a>
+          <a href="index.html#cursos" class="btn btn--primary">Iniciá tu curso</a>
+          <a href="index.html#flota" class="btn btn--ghost">Conocé nuestra flota</a>
         </div>
       </div>
-      <a href="#cursos" class="hero__scroll" aria-label="Ir a la sección de cursos">
+      <a href="index.html#cursos" class="hero__scroll" aria-label="Ir a la sección de cursos">
         <span></span>
       </a>
     </section>
@@ -74,7 +86,7 @@
               <li>Instructores certificados ANAC</li>
               <li>Flota propia de entrenamiento</li>
             </ul>
-            <a href="#contacto" class="card__link">Quiero informarme →</a>
+            <a href="index.html#contacto" class="card__link">Quiero informarme →</a>
           </article>
 
           <article class="card">
@@ -86,11 +98,11 @@
               <li>Habilitación multimotor</li>
               <li>Preparación para exámenes ANAC</li>
             </ul>
-            <a href="#contacto" class="card__link">Quiero informarme →</a>
+            <a href="index.html#contacto" class="card__link">Quiero informarme →</a>
           </article>
 
           <article class="card">
-            <div class="card__icon">🪂</div>
+            <img src="images/emogiPlaneador.png" alt="Icono de planeador" class="card__icon-img">
             <h3 class="card__title">Piloto de Planeador</h3>
             <p class="card__text">Volá en silencio aprovechando las corrientes térmicas de la Precordillera. Una disciplina única y desafiante.</p>
             <ul class="card__list">
@@ -98,7 +110,7 @@
               <li>Aprovechamiento de térmicas cuyanas</li>
               <li>Instrucción progresiva en doble comando</li>
             </ul>
-            <a href="#contacto" class="card__link">Quiero informarme →</a>
+            <a href="index.html#contacto" class="card__link">Quiero informarme →</a>
           </article>
 
           <article class="card">
@@ -110,7 +122,7 @@
               <li>Curso de apertura automática</li>
               <li>Equipamiento homologado</li>
             </ul>
-            <a href="#contacto" class="card__link">Quiero informarme →</a>
+            <a href="index.html#contacto" class="card__link">Quiero informarme →</a>
           </article>
 
           <article class="card">
@@ -122,7 +134,7 @@
               <li>Pilotaje a control remoto</li>
               <li>Actividades para toda la familia</li>
             </ul>
-            <a href="#contacto" class="card__link">Quiero informarme →</a>
+            <a href="index.html#contacto" class="card__link">Quiero informarme →</a>
           </article>
         </div>
       </div>
@@ -133,9 +145,114 @@
       <div class="container">
         <p class="section__eyebrow section__eyebrow--light">Nuestros equipos</p>
         <h2 class="section__title section__title--light">Flota de Aeronaves y Equipos</h2>
-        <p class="section__lead section__lead--light">Contamos con una flota propia de aviones de instrucción, hangares equipados y todo el material necesario para tu formación.</p>
+        <p class="section__lead section__lead--light">Contamos con una flota propia de aviones de instrucción, planeadores, equipos de paracaidismo y hangares equipados para tu formación. Conocé el detalle de cada especialidad en nuestras <a href="barraca-motor.html" style="color:var(--color-sky-light); text-decoration:underline;">Barracas</a>.</p>
 
-        <div class="gallery">
+        <div class="runway-banner">
+          <div class="runway-banner__bg" style="background-image: url('images/pista.jpeg');"></div>
+          <div class="runway-banner__overlay"></div>
+          <div class="runway-banner__content">
+            <p class="runway-banner__title">Nuestra pista</p>
+            <div class="runway-banner__stats">
+              <div class="runway-stat">
+                <span class="runway-stat__value">18 / 36</span>
+                <span class="runway-stat__label">Cabeceras</span>
+              </div>
+              <div class="runway-stat">
+                <span class="runway-stat__value">1515 m</span>
+                <span class="runway-stat__label">Extensión</span>
+              </div>
+              <div class="runway-stat">
+                <span class="runway-stat__value">Pocito</span>
+                <span class="runway-stat__label">San Juan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="fleet-heading">Aeronaves a motor</h3>
+        <div class="fleet-grid">
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/archer.jpeg" alt="Piper Archer II LV-MJE en vuelo" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-MJE</span>
+              <h4 class="fleet-card__title">Piper Archer II</h4>
+              <p class="fleet-card__text">Monomotor de 4 plazas para instrucción avanzada y vuelos de travesía.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/c182.jpeg" alt="Cessna 182 LV-JCR en plataforma" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-JCR</span>
+              <h4 class="fleet-card__title">Cessna 182 Skylane</h4>
+              <p class="fleet-card__text">Monomotor de uso restringido del club, también utilizado como avión de salto.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/pa38-tomahawk.jpeg" alt="Piper Tomahawk PA-38 LV-OFJ frente al hangar" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-OFJ</span>
+              <h4 class="fleet-card__title">Piper Tomahawk PA-38</h4>
+              <p class="fleet-card__text">Biplaza de entrenamiento básico, ideal para tus primeras horas de vuelo.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/seneca.jpeg" alt="Piper Seneca bimotor frente al hangar" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">Bimotor</span>
+              <h4 class="fleet-card__title">Piper Seneca</h4>
+              <p class="fleet-card__text">Utilizado en la habilitación multimotor del curso de Piloto Comercial.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/ranquel.jpeg" alt="Piper PA-18 Ranquel LV-IJJ, avión remolcador" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">LV-IJJ</span>
+              <h4 class="fleet-card__title">Piper PA-18 "Ranquel"</h4>
+              <p class="fleet-card__text">Avión remolcador de planeadores, pieza clave de la Barraca de Planeador.</p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="fleet-heading" style="margin-top:48px;">Planeadores</h3>
+        <div class="fleet-grid">
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/k13.jpeg" alt="Planeador Schleicher K-13 aterrizando" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">Biplaza</span>
+              <h4 class="fleet-card__title">Schleicher K-13</h4>
+              <p class="fleet-card__text">Planeador de entrenamiento en doble comando, base de la instrucción a vela.</p>
+            </div>
+          </article>
+
+          <article class="fleet-card">
+            <div class="fleet-card__img-wrap">
+              <img src="images/szd-foka4.jpeg" alt="Planeador SZD Foka 4 en pista" loading="lazy">
+            </div>
+            <div class="fleet-card__body">
+              <span class="fleet-card__tag">Monoplaza</span>
+              <h4 class="fleet-card__title">SZD Foka 4</h4>
+              <p class="fleet-card__text">Planeador monoplaza de alto rendimiento para vuelo térmico y a vela avanzado.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery" style="margin-top:56px;">
           <figure class="gallery__item gallery__item--wide">
             <img src="images/aviones.jpeg" alt="Aviones de instrucción del Aeroclub San Juan en la plataforma" loading="lazy">
             <figcaption>
@@ -243,7 +360,7 @@
               <span class="contact-list__icon">📍</span>
               <div>
                 <strong>Dirección</strong>
-                <p>Aeródromo Las Chacritas, Ruta Prov. 20, Km 12, San Juan, Argentina</p>
+                <p>Aeródromo Aeroclub San Juan, Pocito, San Juan, Argentina</p>
               </div>
             </li>
             <li>
@@ -257,7 +374,7 @@
               <span class="contact-list__icon">✉️</span>
               <div>
                 <strong>Email</strong>
-                <p>info@aeroclubsanjuan.com.ar</p>
+                <p><a href="mailto:aeroclubsanjuan@gmail.com">aeroclubsanjuan@gmail.com</a></p>
               </div>
             </li>
             <li>
@@ -272,7 +389,7 @@
           <div class="map-embed">
             <iframe
               title="Ubicación Aeroclub San Juan"
-              src="https://maps.google.com/maps?q=Aerodromo%20Las%20Chacritas%20San%20Juan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Aeroclub%20San%20Juan%20Pocito&t=&z=14&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
@@ -336,11 +453,19 @@
       </div>
 
       <nav class="footer__links">
-        <a href="#inicio">Inicio</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#flota">Flota</a>
-        <a href="#eventos">Eventos</a>
-        <a href="#contacto">Contacto</a>
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#cursos">Cursos</a>
+        <a href="index.html#flota">Flota</a>
+        <a href="index.html#eventos">Eventos</a>
+        <a href="camping-club.html">Camping y Club</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+      <nav class="footer__links">
+        <a href="barraca-motor.html">Barraca de Motor</a>
+        <a href="barraca-planeador.html">Barraca de Planeador</a>
+        <a href="barraca-paracaidismo.html">Barraca de Paracaidismo</a>
+        <a href="barraca-aeromodelismo.html">Barraca de Aeromodelismo</a>
       </nav>
 
       <div class="footer__social">

@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
+  initDropdown();
   initSmoothScrollClose();
   initScrollSpy();
   initBackToTop();
@@ -30,6 +31,33 @@ function initNavbar() {
   });
 }
 
+/* ---------- Dropdown "Barracas" del menú ---------- */
+function initDropdown() {
+  const dropdown = document.getElementById('barracasDropdown');
+  if (!dropdown) return;
+
+  const trigger = dropdown.querySelector('.nav-link--dropdown');
+
+  const closeDropdown = () => {
+    dropdown.classList.remove('is-open');
+    trigger.setAttribute('aria-expanded', 'false');
+  };
+
+  trigger.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = dropdown.classList.toggle('is-open');
+    trigger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!dropdown.contains(event.target)) closeDropdown();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeDropdown();
+  });
+}
+
 /* ---------- Cierra el menú móvil al elegir un link ---------- */
 function initSmoothScrollClose() {
   const menu = document.getElementById('navMenu');
@@ -49,6 +77,7 @@ function initSmoothScrollClose() {
 function initScrollSpy() {
   const sections = document.querySelectorAll('main section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
+  if (!sections.length) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -56,7 +85,8 @@ function initScrollSpy() {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute('id');
           navLinks.forEach((link) => {
-            link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+            const href = link.getAttribute('href') || '';
+            link.classList.toggle('is-active', href.endsWith(`#${id}`));
           });
         }
       });
