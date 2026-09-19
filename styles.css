@@ -861,9 +861,10 @@ h1, h2, h3, h4 {
 }
 
 .card__icon-img {
-  height: 44px;
+  height: 32px;
   width: auto;
   margin-bottom: 18px;
+  align-self: flex-start;
 }
 
 .card__title {
