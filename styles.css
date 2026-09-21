@@ -156,6 +156,10 @@ h1, h2, h3, h4 {
   height: 78px;
 }
 
+.navbar__inner.container {
+  max-width: 1340px;
+}
+
 .navbar__brand {
   display: flex;
   align-items: center;
@@ -163,26 +167,41 @@ h1, h2, h3, h4 {
 }
 
 .navbar__logo {
-  height: 58px;
+  height: 50px;
   width: auto;
-  border-radius: 8px;
+}
+
+.navbar__title {
+  font-family: var(--font-heading);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.navbar__title small {
+  font-weight: 500;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  color: var(--color-sky-light);
 }
 
 .navbar__menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 22px;
 }
 
 .navbar__links {
   display: flex;
-  gap: 28px;
+  gap: 20px;
 }
 
 .nav-link {
   color: var(--color-white);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   position: relative;
   padding: 6px 0;
   transition: color var(--transition);
@@ -1203,10 +1222,9 @@ h1, h2, h3, h4 {
 }
 
 .footer__logo {
-  height: 54px;
+  height: 46px;
   width: auto;
   flex-shrink: 0;
-  border-radius: 8px;
 }
 
 .footer__brand p {
@@ -1308,7 +1326,7 @@ h1, h2, h3, h4 {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1100px) {
   .navbar__toggle {
     display: flex;
   }
@@ -1447,5 +1465,9 @@ h1, h2, h3, h4 {
 @media (max-width: 480px) {
   .contact-form {
     padding: 28px 20px;
+  }
+
+  .navbar__title {
+    font-size: 0.85rem;
   }
 }
