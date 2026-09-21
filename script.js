@@ -157,30 +157,37 @@ function initContactForm() {
     field.addEventListener('input', () => clearError(fieldName));
   });
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+  // Si volvemos desde FormSubmit tras un envío exitoso, mostramos el mensaje de éxito.
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('sent') === '1') {
+    status.textContent = '¡Gracias! Recibimos tu consulta y te contactaremos pronto.';
+    status.className = 'form-status success';
+    params.delete('sent');
+    const query = params.toString();
+    const cleanUrl = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`;
+    window.history.replaceState({}, '', cleanUrl);
+  }
 
+  form.addEventListener('submit', (event) => {
     const fieldsValid = Object.keys(validators)
       .map((fieldName) => validateField(fieldName))
       .every(Boolean);
 
     if (!fieldsValid) {
+      event.preventDefault();
       status.textContent = 'Revisá los campos marcados antes de continuar.';
       status.className = 'form-status error';
       return;
     }
 
+    const nextField = form.querySelector('input[name="_next"]');
+    if (nextField) {
+      nextField.value = `${window.location.origin}${window.location.pathname}?sent=1#contacto`;
+    }
+
     const submitBtn = form.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...';
-
-    // Simulación de envío (reemplazar por integración real con backend / API de email).
-    setTimeout(() => {
-      status.textContent = '¡Gracias! Recibimos tu consulta y te contactaremos pronto.';
-      status.className = 'form-status success';
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar mensaje';
-    }, 900);
+    // El formulario continúa su envío normal (sin preventDefault) hacia FormSubmit.
   });
 }

@@ -363,28 +363,20 @@
         <p class="section__lead">Sumate a nuestras actividades abiertas a socios, alumnos y a toda la comunidad.</p>
 
         <div class="events-grid">
-          <article class="event-card">
-            <div class="event-card__date">
-              <span class="event-card__day">04</span>
-              <span class="event-card__month">Oct</span>
+          <article class="event-card event-card--featured">
+            <div class="event-card__media">
+              <img src="images/feriaemprendedores.jpeg" alt="Afiche del evento Puertas Abiertas y Feria de Emprendedores" loading="lazy">
             </div>
-            <div class="event-card__body">
-              <h3>Jornada de vuelos de bautismo</h3>
-              <p>Viví tu primer vuelo en avión acompañado por un instructor certificado. Inscripción previa requerida.</p>
-              <span class="event-card__tag">Abierto a la comunidad</span>
-            </div>
-          </article>
-
-          <article class="event-card">
-            <div class="event-card__date">
-              <span class="event-card__day">11</span>
-              <span class="event-card__month">Oct</span>
-            </div>
-            <div class="event-card__body">
-              <img src="images/feriaemprendedores.jpeg" alt="Afiche del evento Puertas Abiertas y Feria de Emprendedores" class="event-card__poster" loading="lazy">
-              <h3>Puertas abiertas y Feria de Emprendedores</h3>
-              <p>Exhibiciones aéreas, gastronomía local, feria de emprendedores y actividades para toda la familia. Domingo 11 de octubre, de 11 a 19 hs.</p>
-              <span class="event-card__tag">Entrada libre</span>
+            <div class="event-card__content">
+              <div class="event-card__date">
+                <span class="event-card__day">11</span>
+                <span class="event-card__month">Oct</span>
+              </div>
+              <div class="event-card__body">
+                <h3>Puertas abiertas y Feria de Emprendedores</h3>
+                <p>Exhibiciones aéreas, gastronomía local, feria de emprendedores y actividades para toda la familia. Domingo 11 de octubre, de 11 a 19 hs.</p>
+                <span class="event-card__tag">Entrada libre</span>
+              </div>
             </div>
           </article>
 
@@ -423,18 +415,6 @@
               <span class="event-card__tag">Cupos limitados</span>
             </div>
           </article>
-
-          <article class="event-card">
-            <div class="event-card__date">
-              <span class="event-card__day">22</span>
-              <span class="event-card__month">Nov</span>
-            </div>
-            <div class="event-card__body">
-              <h3>Charla informativa: Piloto Comercial</h3>
-              <p>Conocé el plan de estudios, requisitos y salidas laborales de la carrera comercial.</p>
-              <span class="event-card__tag">Ingreso libre</span>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -458,8 +438,8 @@
             <li>
               <span class="contact-list__icon">📞</span>
               <div>
-                <strong>Teléfono</strong>
-                <p>+54 264 000-0000</p>
+                <strong>Teléfono / WhatsApp</strong>
+                <p><a href="https://wa.me/5492645851695?text=Hola%2C%20quiero%20consultar%20sobre%20el%20Centro%20de%20Aviaci%C3%B3n%20Civil%20San%20Juan" target="_blank" rel="noopener">+54 9 2645 85-1695</a></p>
               </div>
             </li>
             <li>
@@ -490,8 +470,14 @@
         </div>
 
         <div class="contacto__form-wrap">
-          <form id="contactForm" class="contact-form" novalidate>
+          <form id="contactForm" class="contact-form" action="https://formsubmit.co/aeroclubsanjuan@gmail.com" method="POST" novalidate>
             <h3>Envianos tu consulta</h3>
+
+            <input type="hidden" name="_subject" value="Nueva consulta desde la web — Centro de Aviación Civil San Juan">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://nicofrini.github.io/aeroclub-web/index.html?sent=1#contacto">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
             <div class="form-group">
               <label for="name">Nombre y apellido</label>
@@ -572,6 +558,13 @@
       <p>&copy; <span id="year"></span> Centro de Aviación Civil San Juan (CACSJ). Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <a href="https://wa.me/5492645851695?text=Hola%2C%20quiero%20consultar%20sobre%20el%20Centro%20de%20Aviaci%C3%B3n%20Civil%20San%20Juan" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.86.505 3.6 1.382 5.11L2 22l5.03-1.36A9.958 9.958 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12.001 2zm0 18.062a8.03 8.03 0 01-4.2-1.175l-.301-.179-3.126.845.84-3.05-.196-.313A8.03 8.03 0 1120.062 12 8.06 8.06 0 0112 20.062z"/>
+    </svg>
+  </a>
 
   <button id="backToTop" class="back-to-top" aria-label="Volver arriba">↑</button>
 

@@ -167,7 +167,7 @@ h1, h2, h3, h4 {
 }
 
 .navbar__logo {
-  height: 50px;
+  height: 62px;
   width: auto;
 }
 
@@ -1051,12 +1051,44 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-.event-card__poster {
+.event-card--featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  padding: 0;
+  overflow: hidden;
+}
+
+.event-card__media {
+  flex: 0 0 42%;
+  align-self: stretch;
+  min-height: 260px;
+}
+
+.event-card__media img {
   width: 100%;
-  max-height: 220px;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-sm);
-  margin-bottom: 14px;
+  display: block;
+}
+
+.event-card--featured .event-card__content {
+  display: flex;
+  gap: 20px;
+  padding: 26px;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .event-card--featured {
+    flex-direction: column;
+  }
+
+  .event-card__media {
+    flex-basis: auto;
+    height: 220px;
+    min-height: 0;
+  }
 }
 
 /* ===== Contacto ===== */
@@ -1269,10 +1301,37 @@ h1, h2, h3, h4 {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ===== WhatsApp flotante ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  z-index: 901;
+  transition: transform var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+}
+
 /* ===== Back to top ===== */
 .back-to-top {
   position: fixed;
-  bottom: 28px;
+  bottom: 94px;
   right: 28px;
   width: 46px;
   height: 46px;
