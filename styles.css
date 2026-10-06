@@ -336,6 +336,12 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero__bg.is-active {
+  opacity: 1;
 }
 
 .hero__overlay {
@@ -472,6 +478,22 @@ h1, h2, h3, h4 {
   font-weight: 800;
   color: var(--color-white);
   margin-bottom: 16px;
+}
+
+.page-hero__title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-hero__title-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 4px;
+  flex-shrink: 0;
 }
 
 .page-hero__subtitle {

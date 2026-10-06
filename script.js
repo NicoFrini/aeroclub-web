@@ -9,8 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initBackToTop();
   initContactForm();
+  initHeroSlideshow();
   document.getElementById('year').textContent = new Date().getFullYear();
 });
+
+/* ---------- Hero: rotación automática de fotos de portada ---------- */
+function initHeroSlideshow() {
+  const slides = document.querySelectorAll('.hero__bg');
+  if (slides.length < 2) return;
+
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+  }, 8000);
+}
 
 /* ---------- Navbar: sombra al hacer scroll + menú móvil ---------- */
 function initNavbar() {
