@@ -487,12 +487,9 @@ h1, h2, h3, h4 {
 }
 
 .page-hero__title-logo {
-  width: 56px;
-  height: 56px;
+  height: 72px;
+  width: auto;
   object-fit: contain;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.92);
-  padding: 4px;
   flex-shrink: 0;
 }
 
