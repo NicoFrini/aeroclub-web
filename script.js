@@ -20,7 +20,10 @@ function initHeroSlideshow() {
 
   let current = 0;
   setInterval(() => {
-    slides[current].classList.remove('is-active');
+    const previous = slides[current];
+    previous.classList.add('is-leaving');
+    previous.classList.remove('is-active');
+    setTimeout(() => previous.classList.remove('is-leaving'), 1500);
     current = (current + 1) % slides.length;
     slides[current].classList.add('is-active');
   }, 8000);
